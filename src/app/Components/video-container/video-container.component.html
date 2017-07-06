@@ -1,0 +1,15 @@
+<div class="row" *ngIf='trending'>
+  <div class="col l8">
+    <div class="video-container">
+          <iframe width="1000" height="600"[src]="url | secureUrl" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <div class="col l4">
+    <div class="row">
+      <div class="col l6" *ngFor='let gif of trending'>
+        <img src="{{gif.images.downsized.url}}" alt="">
+      </div>
+    </div>
+  </div>
+</div>
