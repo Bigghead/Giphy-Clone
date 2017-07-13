@@ -28,4 +28,10 @@ export class VideoContainerComponent implements OnInit {
 
   }
 
+
+  playGif(newUrl: string){
+
+    this.url = newUrl
+  }
+
 }

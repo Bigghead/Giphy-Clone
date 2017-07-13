@@ -7,8 +7,10 @@
 
   <div class="col l4">
     <div class="row">
-      <div class="col l6" *ngFor='let gif of trending'>
-        <img src="{{gif.images.downsized.url}}" alt="">
+      <div class="col l6" *ngFor='let gif of trending; let i = index'>
+        <img src="{{gif.images.downsized.url}}" 
+             alt=""
+             (click)="playGif(gif.embed_url)">
       </div>
     </div>
   </div>
